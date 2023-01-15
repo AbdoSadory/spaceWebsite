@@ -1,13 +1,38 @@
+:root {
+  --black: #0b0d17;
+  --blue: #d0d6f9;
+  --white: #ffffff;
+  --heading-1-size: 150px;
+  --heading-2-size: 100px;
+  --heading-3-size: 56px;
+  --heading-4-size: 32px;
+  --heading-5-size: 28px;
+  --heading-5-letter-space: 4.75px;
+  --subheading-1-size: 28px;
+  --subheading-2-size: 14px;
+  --subheading-2-letter-space: 2.35;
+  --nav-text-size: 16px;
+  --nav-text-letter-space: 2.7;
+  --hover-color: rgba(255, 255, 255, 0.5);
+}
+@font-face {
+  font-family: "Bellefair Regular";
+  src: url(../public/assets/fonts/Bellefair/Bellefair-Regular.ttf);
+}
+@font-face {
+  font-family: "Barlow";
+  src: url(../public/assets/fonts/Barlow_Condensed/BarlowCondensed-Regular.ttf);
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Bellefair Regular" !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  color: unset !important;
+}
+a:hover {
+  color: unset !important;
 }

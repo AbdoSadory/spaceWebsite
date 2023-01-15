@@ -1,0 +1,103 @@
+.home_section {
+  height: 100vh;
+  background-image: url("/public/assets/home/background-home-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  padding: 60px 10px;
+}
+.title_heading_5 {
+  font-size: var(--heading-5-size);
+  letter-spacing: var(--heading-5-letter-space);
+  color: var(--white);
+  font-family: "Barlow";
+}
+.title_heading_1 {
+  font-size: var(--heading-1-size);
+  color: var(--white);
+  margin: 0;
+  padding: 0;
+}
+.desc_body_text {
+  font-size: 20px;
+  color: var(--white);
+  font-family: "Barlow";
+}
+.explore_link_container {
+  width: fit-content;
+  margin: auto;
+  background-color: var(--white);
+  border-radius: 50%;
+  transition: 0.3s all ease-in-out;
+}
+.explore_link_container:hover {
+  box-shadow: 0px 0px 0px 50px var(--hover-color);
+}
+.explore_link {
+  display: block;
+  padding: 95px 60px;
+  text-align: center;
+  font-size: var(--heading-4-size);
+  color: var(--black);
+}
+@media (max-width: 1200px) {
+  .home_section {
+    background-image: url("/public/assets/home/background-home-tablet.jpg");
+    padding: 40px 10px;
+  }
+  .home_section_content {
+    text-align: center;
+  }
+
+  .title_heading_1 {
+    font-size: var(--heading-2-size);
+  }
+  .desc_body_text {
+    width: 50%;
+    margin: auto;
+  }
+  .explore_link_container {
+    margin: 30px auto 0px;
+  }
+  .explore_link {
+    padding: 60px 20px;
+  }
+  .explore_link_container:hover {
+    box-shadow: 0px 0px 0px 30px var(--hover-color);
+  }
+}
+
+@media (max-width: 992px) {
+  .desc_body_text {
+    width: unset;
+    margin: unset;
+  }
+}
+
+@media (max-width: 575px) {
+  .home_section {
+    background-image: url("/public/assets/home/background-home-mobile.jpg");
+    padding: 0px 10px;
+    background-position: center 65%;
+    align-items: center;
+  }
+  .title_heading_5 {
+    font-size: var(--subheading-5-size);
+  }
+  .desc_body_text {
+    font-size: var(--subheading-5-size);
+  }
+  .explore_link_container {
+    margin: 40px auto 0px;
+  }
+}
+@media (max-width: 375px) {
+  .title_heading_5 {
+    letter-spacing: unset;
+  }
+  .title_heading_1 {
+    font-size: var(--heading-3-size);
+  }
+}
