@@ -1,3 +1,14 @@
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.header_brand_logo_img {
+  animation: rotate 30s infinite linear;
+}
 .nav_item_offcanvas {
   color: var(--white);
 }
@@ -6,6 +17,7 @@
   top: 25px;
   left: 0;
   right: 0;
+  z-index: 999;
 }
 .position_relative {
   position: relative;

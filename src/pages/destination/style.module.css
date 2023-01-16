@@ -1,3 +1,11 @@
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .destination_section {
   background-image: url("/public/assets/destination/background-destination-desktop.jpg");
   background-repeat: no-repeat;
@@ -22,6 +30,7 @@
 }
 .destination_image {
   width: 70%;
+  animation: rotate 60s infinite linear;
 }
 .destination_btn {
   background: transparent;
@@ -114,6 +123,11 @@
     padding: 50px 10px 10px;
     background-position: center 65%;
     align-items: flex-end;
+  }
+
+  .destination_section_header {
+    font-size: 25px;
+    margin: 20px 5px;
   }
   .destination_section_content {
     padding: 20px 0px;

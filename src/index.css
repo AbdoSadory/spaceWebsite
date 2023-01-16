@@ -46,3 +46,34 @@ a:hover {
   background-color: rgba(100, 100, 100, 0.2) !important;
   backdrop-filter: blur(20px) !important;
 }
+.crew_section .swiper-pagination {
+  text-align: start !important;
+}
+.crew_section .swiper-pagination-bullet {
+  background-color: var(--hover-color) !important;
+  padding: 10px !important;
+  margin-left: 15px !important;
+}
+.crew_section .swiper-pagination-bullet-active {
+  background-color: var(--white) !important;
+}
+@media (max-width: 1200px) {
+  .crew_section .swiper-pagination {
+    text-align: center !important;
+    top: 175px !important;
+    bottom: unset !important;
+  }
+}
+@media (max-width: 757px) {
+  .crew_section .swiper-pagination {
+    top: 470px !important;
+  }
+  .crew_section .swiper-pagination-bullet {
+    padding: 7px !important;
+  }
+}
+@media (max-width: 375px) {
+  .crew_section .swiper-pagination {
+    top: 366px !important;
+  }
+}

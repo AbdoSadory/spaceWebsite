@@ -1,0 +1,125 @@
+body {
+  background-image: url("/public/assets/crew/background-crew-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+.crew_section {
+  display: flex;
+  align-items: flex-end;
+  padding: 80px 10px 0px;
+}
+
+.crew_section_content {
+  width: 100%;
+  padding: 50px 20px 0px;
+}
+.crew_section_header {
+  font-size: var(--heading-5-size);
+  letter-spacing: var(--heading-5-letter-space);
+  color: var(--white);
+  font-family: "Barlow";
+  margin-bottom: 20px;
+}
+.crew_section_header span {
+  color: var(--blue);
+}
+.crew_card {
+  padding: 50px 0px 0px;
+}
+.crew_role {
+  font-size: var(--heading-4-size);
+  color: var(--hover-color);
+}
+.crew_name {
+  font-size: var(--heading-3-size);
+  color: var(--white);
+  margin: 25px 0;
+}
+.crew_bio {
+  font-size: 18px;
+  color: var(--blue);
+}
+.crew_card_content {
+  order: 1;
+}
+.crew_card_image {
+  order: 2;
+  height: 500px;
+}
+.crew_img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom;
+}
+
+@media (max-width: 1200px) {
+  body {
+    background-image: url("/public/assets/crew/background-crew-tablet.jpg");
+  }
+  .crew_card {
+    padding: 0px;
+  }
+  .crew_card_content {
+    text-align: center;
+    width: 80% !important;
+    margin: auto;
+  }
+  .crew_role {
+    font-size: var(--heading-5-size);
+    margin: 0;
+  }
+  .crew_name {
+    font-size: var(--heading-4-size);
+    margin: 0px;
+  }
+  .crew_card_image {
+    padding-top: 50px;
+  }
+}
+@media (max-width: 757px) {
+  .crew_section_content {
+    padding: 0px 20px 0px;
+  }
+  .crew_card_content {
+    order: 2;
+    width: 100% !important;
+  }
+  .crew_card_image {
+    order: 1;
+  }
+  .crew_card_image {
+    padding: 0px;
+    padding-bottom: 50px;
+  }
+  .crew_img {
+    border-bottom: 1px solid var(--hover-color);
+  }
+}
+@media (max-width: 575px) {
+  body {
+    background-image: url("/public/assets/crew/background-crew-mobile.jpg");
+  }
+  .crew_section_header {
+    font-size: 25px;
+    margin: 20px 5px;
+  }
+  .crew_section_content {
+    padding: 0px;
+  }
+}
+@media (max-width: 375px) {
+  .crew_card_image {
+    height: 400px;
+  }
+  .crew_role {
+    font-size: 16px;
+  }
+  .crew_name {
+    font-size: 20px;
+  }
+  .crew_bio {
+    font-size: 15px;
+  }
+}
