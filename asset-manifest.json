@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/spaceWebsite/static/css/main.60d7aaac.css",
+    "main.js": "/spaceWebsite/static/js/main.0adc6eee.js",
+    "static/media/BarlowCondensed-Regular.ttf": "/spaceWebsite/static/media/BarlowCondensed-Regular.a51441e972d57b28e7c1.ttf",
+    "static/media/background-home-desktop.jpg": "/spaceWebsite/static/media/background-home-desktop.cdf3864ecbfdf20e8c3b.jpg",
+    "static/media/background-destination-desktop.jpg": "/spaceWebsite/static/media/background-destination-desktop.468b922c69bf5499b4bc.jpg",
+    "static/media/Bellefair-Regular.ttf": "/spaceWebsite/static/media/Bellefair-Regular.6b84d927d5ad108e909a.ttf",
+    "static/media/background-home-tablet.jpg": "/spaceWebsite/static/media/background-home-tablet.bc9efcc3281fa6801077.jpg",
+    "static/media/background-crew-desktop.jpg": "/spaceWebsite/static/media/background-crew-desktop.88a3c692fd34eb311e04.jpg",
+    "static/media/background-destination-tablet.jpg": "/spaceWebsite/static/media/background-destination-tablet.8f55d346d8b6cfd95ab7.jpg",
+    "static/media/background-crew-tablet.jpg": "/spaceWebsite/static/media/background-crew-tablet.16d51cf61e98ce45eb61.jpg",
+    "static/media/background-home-mobile.jpg": "/spaceWebsite/static/media/background-home-mobile.13f7adecbcb3c3f170d8.jpg",
+    "static/media/background-destination-mobile.jpg": "/spaceWebsite/static/media/background-destination-mobile.e0131e27e751ead1a922.jpg",
+    "index.html": "/spaceWebsite/index.html",
+    "main.60d7aaac.css.map": "/spaceWebsite/static/css/main.60d7aaac.css.map",
+    "main.0adc6eee.js.map": "/spaceWebsite/static/js/main.0adc6eee.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.60d7aaac.css",
+    "static/js/main.0adc6eee.js"
+  ]
+}
