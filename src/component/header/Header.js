@@ -1,7 +1,47 @@
 import React from "react";
 import styles from "./style.module.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 const Header = () => {
+  let url = useLocation();
+  const nav_items = document.getElementsByClassName("nav-item");
+  for (let item of nav_items) {
+    item.classList.remove("active", "active_nav_offcanvas");
+  }
+  if (url.pathname === "/") {
+    const home_nav_item = document.getElementById("nav-item-home");
+    const home_nav_item_offcanvas = document.getElementById(
+      "nav-item-home-offcanvas"
+    );
+    home_nav_item && home_nav_item.classList.add("active");
+    home_nav_item_offcanvas &&
+      home_nav_item_offcanvas.classList.add("active_nav_offcanvas");
+  } else if (url.pathname === "/destination") {
+    const destination_nav_item = document.getElementById(
+      "nav-item-destination"
+    );
+    const destination_nav_item_offcanvas = document.getElementById(
+      "nav-item-destination-offcanvas"
+    );
+    destination_nav_item && destination_nav_item.classList.add("active");
+    destination_nav_item_offcanvas &&
+      destination_nav_item_offcanvas.classList.add("active_nav_offcanvas");
+  } else if (url.pathname === "/crew") {
+    const crew_nav_item = document.getElementById("nav-item-crew");
+    const crew_nav_item_offcanvas = document.getElementById(
+      "nav-item-crew-offcanvas"
+    );
+    crew_nav_item && crew_nav_item.classList.add("active");
+    crew_nav_item_offcanvas &&
+      crew_nav_item_offcanvas.classList.add("active_nav_offcanvas");
+  } else if (url.pathname === "/technology") {
+    const technology_nav_item = document.getElementById("nav-item-technology");
+    const technology_nav_item_offcanvas = document.getElementById(
+      "nav-item-technology-offcanvas"
+    );
+    technology_nav_item && technology_nav_item.classList.add("active");
+    technology_nav_item_offcanvas &&
+      technology_nav_item_offcanvas.classList.add("active_nav_offcanvas");
+  }
   return (
     <header id="header" className={`${styles.header_section}`}>
       <nav className="navbar navbar-expand-lg p-0">
@@ -41,7 +81,7 @@ const Header = () => {
             <ul
               className={`${styles.navbar_desktop} navbar-nav ms-auto mb-2 mb-lg-0 justify-content-center`}
             >
-              <li className={`nav-item ${styles.nav_item}`}>
+              <li className={`nav-item ${styles.nav_item}`} id="nav-item-home">
                 <Link
                   className={`nav-link hide-title p-4 ${styles.nav_link} text-uppercase`}
                   title="news"
@@ -51,16 +91,19 @@ const Header = () => {
                   00 home
                 </Link>
               </li>
-              <li className={`nav-item ${styles.nav_item}`}>
+              <li
+                className={`nav-item  ${styles.nav_item}`}
+                id="nav-item-destination"
+              >
                 <Link
-                  className={`nav-link hide-title p-4 ${styles.nav_link} text-uppercase`}
+                  className={`nav-link nav-link-destination hide-title p-4 ${styles.nav_link} text-uppercase`}
                   title="dimension"
                   to="/destination"
                 >
                   01 destination
                 </Link>
               </li>
-              <li className={`nav-item ${styles.nav_item}`}>
+              <li className={`nav-item  ${styles.nav_item}`} id="nav-item-crew">
                 <Link
                   className={`nav-link hide-title p-4 ${styles.nav_link} text-uppercase`}
                   title="we are"
@@ -69,7 +112,10 @@ const Header = () => {
                   02 crew
                 </Link>
               </li>
-              <li className={`nav-item ${styles.nav_item}`}>
+              <li
+                className={`nav-item  ${styles.nav_item}`}
+                id="nav-item-technology"
+              >
                 <Link
                   className={`nav-link hide-title p-4 ${styles.nav_link} text-uppercase`}
                   title="agents"
@@ -102,7 +148,10 @@ const Header = () => {
             </div>
             <div className="offcanvas-body">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end">
-                <li className={`nav-item ${styles.nav_item_offcanvas}`}>
+                <li
+                  className={`nav-item  ${styles.nav_item_offcanvas}`}
+                  id="nav-item-home-offcanvas"
+                >
                   <Link
                     className={`nav-link hide-title p-2
                      ${styles.nav_link_offcanvas} text-uppercase`}
@@ -113,7 +162,10 @@ const Header = () => {
                     00 home
                   </Link>
                 </li>
-                <li className={`nav-item ${styles.nav_item_offcanvas}`}>
+                <li
+                  className={`nav-item  ${styles.nav_item_offcanvas}`}
+                  id="nav-item-destination-offcanvas"
+                >
                   <Link
                     className={`nav-link hide-title p-2
                      ${styles.nav_link_offcanvas} text-uppercase`}
@@ -123,7 +175,10 @@ const Header = () => {
                     01 destination
                   </Link>
                 </li>
-                <li className={`nav-item ${styles.nav_item_offcanvas}`}>
+                <li
+                  className={`nav-item  ${styles.nav_item_offcanvas}`}
+                  id="nav-item-crew-offcanvas"
+                >
                   <Link
                     className={`nav-link hide-title p-2
                      ${styles.nav_link_offcanvas} text-uppercase`}
@@ -133,7 +188,10 @@ const Header = () => {
                     02 crew
                   </Link>
                 </li>
-                <li className={`nav-item ${styles.nav_item_offcanvas}`}>
+                <li
+                  className={`nav-item  ${styles.nav_item_offcanvas}`}
+                  id="nav-item-technology-offcanvas"
+                >
                   <Link
                     className={`nav-link hide-title p-2
                      ${styles.nav_link_offcanvas} text-uppercase`}

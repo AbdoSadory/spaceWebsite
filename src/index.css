@@ -36,3 +36,13 @@ a {
 a:hover {
   color: unset !important;
 }
+.active_nav_offcanvas {
+  border-right: 3px solid white;
+}
+.active {
+  border-bottom: 3px solid var(--white) !important;
+}
+.offcanvas {
+  background-color: rgba(100, 100, 100, 0.2) !important;
+  backdrop-filter: blur(20px) !important;
+}

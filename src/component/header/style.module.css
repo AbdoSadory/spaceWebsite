@@ -1,3 +1,6 @@
+.nav_item_offcanvas {
+  color: var(--white);
+}
 .header_section {
   position: fixed;
   top: 25px;

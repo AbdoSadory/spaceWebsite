@@ -84,10 +84,10 @@
     align-items: center;
   }
   .title_heading_5 {
-    font-size: var(--subheading-5-size);
+    font-size: var(--subheading-2-size);
   }
   .desc_body_text {
-    font-size: var(--subheading-5-size);
+    font-size: var(--subheading-2-size);
   }
   .explore_link_container {
     margin: 40px auto 0px;
