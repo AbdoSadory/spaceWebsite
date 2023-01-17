@@ -25,6 +25,7 @@
 }
 body {
   margin: 0;
+  background-color: var(--black);
   font-family: "Bellefair Regular" !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
