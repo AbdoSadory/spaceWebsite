@@ -39,7 +39,7 @@ Desktop size
 - Semantic HTML5 markup
 - [React](https://reactjs.org/) - JS library
 - CSS custom properties and Flexbox through CSS modules
-- Swiper framework
+- Swiper and Bootstrap.
 
 ### What I learned
 
