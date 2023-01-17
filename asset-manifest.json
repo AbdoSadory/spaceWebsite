@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/spaceWebsite/static/css/main.60d7aaac.css",
-    "main.js": "/spaceWebsite/static/js/main.c76b1e53.js",
+    "main.css": "/spaceWebsite/static/css/main.cba84545.css",
+    "main.js": "/spaceWebsite/static/js/main.c80aa5fc.js",
     "static/media/image-victor-glover.png": "/spaceWebsite/static/media/image-victor-glover.8a9a5424588b73ec61c2.png",
     "static/media/image-anousheh-ansari.png": "/spaceWebsite/static/media/image-anousheh-ansari.2d647128496ddc638acd.png",
     "static/media/image-mark-shuttleworth.png": "/spaceWebsite/static/media/image-mark-shuttleworth.fc30f35b05fc0bc4ee47.png",
@@ -40,11 +40,11 @@
     "static/media/logo.svg": "/spaceWebsite/static/media/logo.565f7f2c0534403f11b71994f4311210.svg",
     "static/media/icon-close.svg": "/spaceWebsite/static/media/icon-close.d47fda63cbd8b3fedbbc1b2a53f64470.svg",
     "static/media/icon-hamburger.svg": "/spaceWebsite/static/media/icon-hamburger.5273efa7c50e96ef3e51e7a2b54048ce.svg",
-    "main.60d7aaac.css.map": "/spaceWebsite/static/css/main.60d7aaac.css.map",
-    "main.c76b1e53.js.map": "/spaceWebsite/static/js/main.c76b1e53.js.map"
+    "main.cba84545.css.map": "/spaceWebsite/static/css/main.cba84545.css.map",
+    "main.c80aa5fc.js.map": "/spaceWebsite/static/js/main.c80aa5fc.js.map"
   },
   "entrypoints": [
-    "static/css/main.60d7aaac.css",
-    "static/js/main.c76b1e53.js"
+    "static/css/main.cba84545.css",
+    "static/js/main.c80aa5fc.js"
   ]
 }
