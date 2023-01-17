@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import styles from "./style.module.css";
 
-const Crew = ({ crew }) => {
+const Crew = ({ crew, loading, error }) => {
   let [crew_data, setcrew_data] = useState([]);
   useEffect(() => {
     crew && setcrew_data([...crew]);
@@ -13,65 +13,71 @@ const Crew = ({ crew }) => {
   return (
     <section className={`${styles.crew_section} crew_section`}>
       <h2 className="d-none">Crew data</h2>
-      <div className={`${styles.crew_section_content}`}>
-        <h2 className={`${styles.crew_section_header} text-uppercase`}>
-          <span>02</span> Meet your crew
-        </h2>
-        <div className="w-100">
-          <Swiper
-            pagination={{
-              clickable: true,
-            }}
-            click
-            modules={[Pagination]}
-            className="mySwiper"
-            slidesPerView={1}
-          >
-            {crew_data.length === 0 ? (
-              <SwiperSlide>
-                <h2 className="text-light text-uppercase w-100 text-center">
-                  Loading
-                </h2>
-              </SwiperSlide>
-            ) : (
-              crew_data.map((crewMember) => (
-                <SwiperSlide key={crewMember.name} className="p-0 m-0">
-                  <div className={`${styles.crew_card}`}>
-                    <div
-                      className={`row justify-content-between align-items-center m-0 p-0`}
-                    >
+      {error && <div className="notFoundPage">Error During Fetching</div>}
+      {loading && <div className="notFoundPage">Loading</div>}
+      {crew_data && (
+        <div className={`${styles.crew_section_content}`}>
+          <h2 className={`${styles.crew_section_header} text-uppercase`}>
+            <span>02</span> Meet your crew
+          </h2>
+          <div className="w-100">
+            <Swiper
+              pagination={{
+                clickable: true,
+              }}
+              click
+              modules={[Pagination]}
+              className="mySwiper"
+              slidesPerView={1}
+            >
+              {crew_data.length === 0 ? (
+                <SwiperSlide>
+                  <h2 className="text-light text-uppercase w-100 text-center">
+                    Loading
+                  </h2>
+                </SwiperSlide>
+              ) : (
+                crew_data.map((crewMember) => (
+                  <SwiperSlide key={crewMember.name} className="p-0 m-0">
+                    <div className={`${styles.crew_card}`}>
                       <div
-                        className={`${styles.crew_card_content} col-12 col-xl-5 px-0`}
+                        className={`row justify-content-between align-items-center m-0 p-0`}
                       >
-                        <p className={`${styles.crew_role} text-uppercase`}>
-                          {crewMember.role}
-                        </p>
-                        <h2 className={`${styles.crew_name} text-uppercase`}>
-                          {crewMember.name}
-                        </h2>
-                        <p className={`${styles.crew_bio}`}>{crewMember.bio}</p>
-                      </div>
-                      <div
-                        className={`${styles.crew_card_image} col-12 col-xl-5 mx-0 px-0`}
-                      >
-                        <img
-                          className={`${styles.crew_img}`}
-                          src={
-                            require("../../" +
-                              crewMember.images.png.slice(2)) ||
-                            require("../../assets/destination/image-moon.png")
-                          }
-                          alt="crew person"
-                        />
+                        <div
+                          className={`${styles.crew_card_content} col-12 col-xl-5 px-0`}
+                        >
+                          <p className={`${styles.crew_role} text-uppercase`}>
+                            {crewMember.role}
+                          </p>
+                          <h2 className={`${styles.crew_name} text-uppercase`}>
+                            {crewMember.name}
+                          </h2>
+                          <p className={`${styles.crew_bio}`}>
+                            {crewMember.bio}
+                          </p>
+                        </div>
+                        <div
+                          className={`${styles.crew_card_image} col-12 col-xl-5 mx-0 px-0`}
+                        >
+                          <img
+                            className={`${styles.crew_img}`}
+                            src={
+                              require("../../" +
+                                crewMember.images.png.slice(2)) ||
+                              require("../../assets/destination/image-moon.png")
+                            }
+                            alt="crew person"
+                          />
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </SwiperSlide>
-              ))
-            )}
-          </Swiper>
+                  </SwiperSlide>
+                ))
+              )}
+            </Swiper>
+          </div>
         </div>
-      </div>
+      )}
     </section>
   );
 };

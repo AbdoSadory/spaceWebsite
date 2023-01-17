@@ -14,7 +14,7 @@ function App() {
   let url = useLocation();
   useEffect(() => {
     const fetchController = new AbortController();
-    console.log(url);
+
     fetch("https://abdosadory.github.io/spaceWebsite/data/data.json", {
       signal: fetchController.signal,
     })
@@ -43,21 +43,35 @@ function App() {
       <Header />
       <main>
         <Routes>
-          <Route path="/spaceWebsite" element={<Home />} />
+          <Route path="/spaceWebsite" element={<Home />} exact />
           <Route
             path="/destination"
             element={
-              <Destination destinations={apiData && apiData["destinations"]} />
+              <Destination
+                destinations={apiData && apiData["destinations"]}
+                loading={isLoading}
+                error={error}
+              />
             }
           />
           <Route
             path="/crew"
-            element={<Crew crew={apiData && apiData["crew"]} />}
+            element={
+              <Crew
+                crew={apiData && apiData["crew"]}
+                loading={isLoading}
+                error={error}
+              />
+            }
           />
           <Route
             path="/technology"
             element={
-              <Technology technology={apiData && apiData["technology"]} />
+              <Technology
+                technology={apiData && apiData["technology"]}
+                loading={isLoading}
+                error={error}
+              />
             }
           />
         </Routes>

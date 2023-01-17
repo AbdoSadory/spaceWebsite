@@ -36,6 +36,16 @@ a {
 a:hover {
   color: unset !important;
 }
+.notFoundPage {
+  height: 100vh;
+  font-size: 50px;
+  width: 100%;
+  color: var(--white);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .active_nav_offcanvas {
   border-right: 3px solid white;
 }
@@ -57,11 +67,64 @@ a:hover {
 .crew_section .swiper-pagination-bullet-active {
   background-color: var(--white) !important;
 }
+.technology_section .swiper-pagination {
+  width: unset !important;
+  bottom: unset !important;
+  top: 150px;
+  left: 35px !important;
+}
+.technology_section .swiper-pagination-bullet {
+  display: block;
+  background-color: transparent !important;
+  border: 1px solid var(--hover-color);
+  margin-bottom: 35px !important;
+  width: 70px !important;
+  height: 70px !important;
+  position: relative;
+}
+.technology_section .swiper-pagination-bullet::before {
+  content: "1";
+  font-size: 45px;
+  color: var(--white);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.technology_section .swiper-pagination-bullet:nth-child(2)::before {
+  content: "2";
+}
+.technology_section .swiper-pagination-bullet:nth-child(3)::before {
+  content: "3";
+}
+.technology_section .swiper-pagination-bullet-active {
+  background-color: var(--white) !important;
+}
+.technology_section .swiper-pagination-bullet-active::before {
+  color: var(--black);
+}
 @media (max-width: 1200px) {
   .crew_section .swiper-pagination {
     text-align: center !important;
-    top: 175px !important;
+    top: 165px !important;
     bottom: unset !important;
+  }
+  .technology_section .swiper-pagination {
+    width: 100% !important;
+    text-align: center;
+    top: 440px;
+    left: unset !important;
+  }
+  .technology_section .swiper-pagination-bullet {
+    display: inline-block;
+    width: 45px !important;
+    height: 45px !important;
+    margin-bottom: unset !important;
+    margin-right: 35px !important;
+  }
+  .technology_section .swiper-pagination-bullet::before {
+    font-size: 35px;
   }
 }
 @media (max-width: 757px) {
@@ -73,7 +136,20 @@ a:hover {
   }
 }
 @media (max-width: 375px) {
+  .offcanvas {
+    max-width: 60% !important;
+  }
   .crew_section .swiper-pagination {
     top: 366px !important;
+  }
+  .technology_section .swiper-pagination {
+    top: 185px;
+  }
+  .technology_section .swiper-pagination-bullet {
+    width: 35px !important;
+    height: 35px !important;
+  }
+  .technology_section .swiper-pagination-bullet::before {
+    font-size: 25px;
   }
 }

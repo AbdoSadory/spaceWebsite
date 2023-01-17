@@ -3,11 +3,11 @@
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(-360deg);
   }
 }
 .header_brand_logo_img {
-  animation: rotate 30s infinite linear;
+  animation: rotate 5s infinite linear;
 }
 .nav_item_offcanvas {
   color: var(--white);
