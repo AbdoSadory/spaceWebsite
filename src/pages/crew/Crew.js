@@ -19,7 +19,10 @@ const Crew = ({ crew }) => {
         </h2>
         <div className="w-100">
           <Swiper
-            pagination={true}
+            pagination={{
+              clickable: true,
+            }}
+            click
             modules={[Pagination]}
             className="mySwiper"
             slidesPerView={1}
@@ -53,7 +56,11 @@ const Crew = ({ crew }) => {
                       >
                         <img
                           className={`${styles.crew_img}`}
-                          src={crewMember.images.png.slice(1)}
+                          src={
+                            require("../../" +
+                              crewMember.images.png.slice(2)) ||
+                            require("../../assets/destination/image-moon.png")
+                          }
                           alt="crew person"
                         />
                       </div>

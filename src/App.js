@@ -1,5 +1,5 @@
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Header from "./component/header/Header";
 import Home from "./pages/home/Home";
 import Destination from "./pages/destination/Destination";
@@ -11,9 +11,11 @@ function App() {
   let [apiData, setapiData] = useState([]);
   let [error, setError] = useState(false);
   let [isLoading, setIsLoading] = useState(true);
+  let url = useLocation();
   useEffect(() => {
     const fetchController = new AbortController();
-    fetch("http://localhost:3000/data/data.json", {
+    console.log(url);
+    fetch("https://abdosadory.github.io/spaceWebsite/data/data.json", {
       signal: fetchController.signal,
     })
       .then((res) => {
@@ -41,7 +43,7 @@ function App() {
       <Header />
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/spaceWebsite" element={<Home />} />
           <Route
             path="/destination"
             element={

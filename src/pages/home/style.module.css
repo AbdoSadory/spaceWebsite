@@ -1,6 +1,6 @@
 .home_section {
   height: 100vh;
-  background-image: url("/public/assets/home/background-home-desktop.jpg");
+  background-image: url("../../assets/home/background-home-desktop.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -44,7 +44,7 @@
 }
 @media (max-width: 1200px) {
   .home_section {
-    background-image: url("/public/assets/home/background-home-tablet.jpg");
+    background-image: url("../../assets/home/background-home-tablet.jpg");
     padding: 40px 10px;
   }
   .home_section_content {
@@ -78,7 +78,7 @@
 
 @media (max-width: 575px) {
   .home_section {
-    background-image: url("/public/assets/home/background-home-mobile.jpg");
+    background-image: url("../../assets/home/background-home-mobile.jpg");
     padding: 0px 10px;
     background-position: center 65%;
     align-items: center;

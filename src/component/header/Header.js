@@ -1,13 +1,16 @@
 import React from "react";
 import styles from "./style.module.css";
 import { Link, useLocation } from "react-router-dom";
+import logo from "../../assets/shared/logo.svg";
+import close_btn from "../../assets/shared/icon-close.svg";
+import burger_close_btn from "../../assets/shared/icon-hamburger.svg";
 const Header = () => {
   let url = useLocation();
   const nav_items = document.getElementsByClassName("nav-item");
   for (let item of nav_items) {
     item.classList.remove("active", "active_nav_offcanvas");
   }
-  if (url.pathname === "/") {
+  if (url.pathname === "/spaceWebsite") {
     const home_nav_item = document.getElementById("nav-item-home");
     const home_nav_item_offcanvas = document.getElementById(
       "nav-item-home-offcanvas"
@@ -50,11 +53,11 @@ const Header = () => {
             <Link
               className={`navbar-brand ${styles.header_brand_logo} d-inline-block text-center hide-title`}
               title="brand"
-              to="/"
+              to="/spaceWebsite"
             >
               <img
                 className={`${styles.header_brand_logo_img}`}
-                src="assets/shared/logo.svg"
+                src={logo}
                 alt="logo"
               />
             </Link>
@@ -68,7 +71,7 @@ const Header = () => {
             aria-controls="offcanvasNavbar"
           >
             <img
-              src="assets/shared/icon-hamburger.svg"
+              src={burger_close_btn}
               className={` ${styles.nav_icon}`}
               alt="icon-hamburger"
             />
@@ -86,7 +89,7 @@ const Header = () => {
                   className={`nav-link hide-title p-4 ${styles.nav_link} text-uppercase`}
                   title="news"
                   aria-current="page"
-                  to="/"
+                  to="/spaceWebsite"
                 >
                   00 home
                 </Link>
@@ -140,7 +143,7 @@ const Header = () => {
                 aria-label="Close"
               >
                 <img
-                  src="assets/shared/icon-close.svg"
+                  src={close_btn}
                   className={` ${styles.nav_icon}`}
                   alt="icon-hamburger"
                 />
@@ -157,7 +160,7 @@ const Header = () => {
                      ${styles.nav_link_offcanvas} text-uppercase`}
                     title="news"
                     aria-current="page"
-                    to="/"
+                    to="/spaceWebsite"
                   >
                     00 home
                   </Link>

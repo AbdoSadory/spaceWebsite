@@ -31,7 +31,10 @@ const Destination = ({ destinations }) => {
             >
               <img
                 src={
-                  destination_data[0] && destination_data[0].images.png.slice(1)
+                  destination_data[0]
+                    ? require("../../" +
+                        destination_data[0].images.png.slice(2))
+                    : require("../../assets/destination/image-moon.png")
                 }
                 alt="moon"
                 className={`${styles.destination_image}`}

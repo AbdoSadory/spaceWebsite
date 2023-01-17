@@ -1,5 +1,5 @@
 body {
-  background-image: url("/public/assets/crew/background-crew-desktop.jpg");
+  background-image: url("../../assets/crew/background-crew-desktop.jpg");
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
@@ -56,7 +56,7 @@ body {
 
 @media (max-width: 1200px) {
   body {
-    background-image: url("/public/assets/crew/background-crew-tablet.jpg");
+    background-image: url("../../assets/crew/background-crew-tablet.jpg");
   }
   .crew_card {
     padding: 0px;
@@ -99,7 +99,7 @@ body {
 }
 @media (max-width: 575px) {
   body {
-    background-image: url("/public/assets/crew/background-crew-mobile.jpg");
+    background-image: url("../../assets/crew/background-crew-mobile.jpg");
   }
   .crew_section_header {
     font-size: 25px;

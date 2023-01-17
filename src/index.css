@@ -17,11 +17,11 @@
 }
 @font-face {
   font-family: "Bellefair Regular";
-  src: url(../public/assets/fonts/Bellefair/Bellefair-Regular.ttf);
+  src: url(./assets/fonts/Bellefair/Bellefair-Regular.ttf);
 }
 @font-face {
   font-family: "Barlow";
-  src: url(../public/assets/fonts/Barlow_Condensed/BarlowCondensed-Regular.ttf);
+  src: url(./assets/fonts/Barlow_Condensed/BarlowCondensed-Regular.ttf);
 }
 body {
   margin: 0;
